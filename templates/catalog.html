@@ -1,0 +1,61 @@
+
+<html>
+<head>
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+	</head>
+
+  <body>
+    <h1>Winter Sports Catalog!</h1>
+
+    <!-- <div class="col-md-2 text-right"> -->
+			<!-- <a href="{{url_for('showLogin')}}">Click Here to Log in </a> -->
+		<!-- </div> -->
+
+    <div class="col-md-2 text-right">
+        {%if 'username' not in session %}
+    <a href="{{url_for('showLogin')}}">Click Here to Login </a>
+    {% else %}
+    <a href="{{url_for('gdisconnect')}}">Logout </a>
+    {% endif %}
+
+    <p><img src="/static/ski.jpeg" alt="Skiing" padding=50px style="float:right;width:300px;height:550px;padding:150px;"></p>
+
+    <p><img src="/static/mountain.jpeg" alt="Skiing" padding=50px style="float:left;width:300px;height:550px;padding:150px;"></p>
+
+    <div class="container">
+    <div class="opener">
+      <h3>Welcome to the Winter Sports Catalog! This online catalog can supply you with all of your potential winter sports needs.</h3>
+    </div>
+    </div>
+
+    <!--MESSAGE FLASHING EXAMPLE -->
+      {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <ul>
+      {% for message in messages %}
+        <li><strong>{{message}}</strong></li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    {% endwith %}
+
+    {% for i in categories %}
+
+    <div class="Box2">
+      <h2>{{ i.name }}</h2>
+        <p>
+            <a class="buttons" href="{{ url_for('showCategories', category_id = i.id) }}">See Items</a>
+            <br>
+            <br>
+        </p>
+     </div>
+
+    {% endfor %}
+
+    <footer id="main-footer">
+      <p> &copy; 2019 Spencer Bertsch - Udacity Full Stack Nanodegree </p>
+    </footer>
+  </body>
+
+
+</html>

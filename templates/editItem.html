@@ -1,0 +1,26 @@
+<html>
+<head>
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+	</head>
+  <h1> Edit Item: {{item.name}}</h1>
+  <body>
+  <form action="#" method = 'post'>
+    <br>
+    <br>
+    <h2>Item Name:</h2>
+      <input type ='text' size='30' name='name' placeholder='{{item.name}}'>
+    <br>
+    <br>
+    <h2>Description:</h2>
+      <input type ='text' size='50' name='description' placeholder='{{item.description}}'>
+
+  <br>
+  <br>
+  <input type='submit' value='Submit Changes'>
+  <br>
+  <br>
+  <a class="buttons" href="{{ url_for('showCatalog') }}">Cancel</a>
+  </form>
+
+  </body>
+</html>

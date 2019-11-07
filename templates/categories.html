@@ -1,0 +1,52 @@
+<html>
+<head>
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+	</head>
+
+  <body>
+
+    <h1>{{category.name}}</h1>
+
+    <!--MESSAGE FLASHING EXAMPLE -->
+      {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <ul>
+      {% for message in messages %}
+        <li><strong>{{message}}</strong></li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    {% endwith %}
+
+      <div>
+        <a href='{{url_for('addItem', category_id = category.id) }}'>Create New Item</a>
+        <br>
+        <br>
+        <a class="buttons" href="{{ url_for('showCatalog') }}">Return to Homepage</a>
+      </div>
+
+    <div ="categories">
+    {% for i in items %}
+
+      <div class="Box1">
+
+        <h2>{{i.name}}</h2>
+
+        <h4>{{i.description}}</h4>
+        <div class="edit">
+          <a href='{{url_for('editItem', category_id = category.id, item_id = i.id) }}'>Edit</a>
+        </div>
+        <br>
+        <div class="delete">
+          <a href='{{url_for('deleteItem', category_id = category.id, item_id = i.id) }}'>Delete</a>
+        </div>
+        <br>
+        <div class="newItem">
+          <a href='{{url_for('showItem', category_id = category.id, item_id = i.id) }}'>Show Item</a>
+      </div>
+    </div>
+
+    {% endfor %}
+  </body>
+
+</html>
