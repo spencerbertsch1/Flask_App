@@ -1,0 +1,232 @@
+/* The two images in the static directory are taken from: unsplash.com */
+/* These images are freely usable by anyone - see unsplash.com */
+/* Several concepts in this .css file were adapted in part form Traversy Media */
+/* His tutorial on css was very helpful: https://www.youtube.com/watch?v=yfoY53QXEnI  */
+
+body {
+    text-align: center;
+    font-family: Arial;
+    /*background-color: #6495ED;*/
+    background-image: linear-gradient(to top, #005bea 0%, #00c6fb 100%);
+}
+
+#main-header{
+  background-color:coral;
+  color:FFFFFF;
+}
+
+.container {
+  width:30%;
+  margin:auto;
+
+}
+
+.opener {
+    background-color: #A9A9A9;
+    border: 1.5px white solid;
+    padding: 10px;
+    margin: 20px;
+}
+
+/* Using the URLs of the images here - also have the .jpeg files in the static directory so those could be used too*/
+.p-box1{
+  width:400px;
+  height:500px;
+  margin:20px;
+
+  background-image: url('https://images.unsplash.com/photo-1565992441121-4367c2967103?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=882&q=80');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.p-box2{
+  width:400px;
+  height:500px;
+  margin:20px;
+
+  background-image: url('https://images.unsplash.com/photo-1557244301-70d47d388ec2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=975&q=80');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.Box1 {
+  width:25%;
+  background-color: #4169E1;
+  border: 1.5px white solid;
+  padding: 10px;
+  margin: 15px auto;
+
+}
+
+.Box1 h2{
+	font-family:Tahoma;
+	font-weight:800;
+	font-style:italic;
+	text-decoration:underline;
+	text-transform:uppercase;
+  letter-spacing: 0.15em;
+  text-shadow: 1.5px 0.5px red;
+}
+
+.Box1 h1{
+	font-family:Tahoma;
+	font-weight:900;
+	font-style:italic;
+	text-decoration:underline;
+	text-transform:uppercase;
+  letter-spacing: 0.15em;
+  text-shadow: 1.5px 0.5px red;
+}
+
+.Box1 p{
+	font-family:Tahoma;
+	font-weight:800;
+	font-style:italic;
+	text-decoration:underline;
+	text-transform:uppercase;
+  letter-spacing: 0.15em;
+  text-shadow: 1.5px 0.5px red;
+}
+
+.Box2{
+	border:3px dotted #ccc;
+	padding:20px;
+	margin:20px auto;
+  width:15%;
+  /*padding: 10px;
+  margin: 15px auto;*/
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-align: center;
+  color: #ffffff;
+}
+
+h1,
+h2 {
+    text-align: center;
+    font-family: Arial;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    border-bottom: 2px solid #eee;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+p,
+dd,
+dt {
+    color: #cccccc;
+}
+
+/* LINKS */
+a {
+    text-decoration: none;
+    color: #FFFFE0;
+    font-size: 1.1em;
+}
+
+.edit {
+  font-family:Tahoma;
+	font-weight:500;
+  font-size: 1em;
+  background-color: #228B22;
+  border: 0.5px white solid;
+  padding: 0px auto;
+  margin: 0px auto;
+  width: 45px;
+}
+
+.edit a {
+  color: #FFFFFF;
+}
+
+.delete {
+  font-family:Tahoma;
+	font-weight:500;
+  font-size: 1em;
+  background-color: #B22222;
+  border: 0.5px white solid;
+  padding: 1px auto;
+  margin: 0px auto;
+  width: 60px;
+}
+
+.delete a {
+  color: #FFFFFF;
+}
+
+
+
+.pane {
+    position: absolute;
+    left: 25%;
+    border: 2px solid;
+    border-radius: 25px;
+    padding: 5px;
+    margin: 5px;
+    border-color: #999999;
+    background-color: #333333
+}
+
+.header {
+    left: 50%;
+    text-align: center;
+}
+
+.name {
+    width: 50%;
+    display: inline-block;
+    float: left;
+}
+
+.description {}
+
+.price {
+    text-align: right;
+    width: 50%;
+    float: right;
+}
+
+.editdeletepane {}
+
+.flash {
+    background: #E5E5E5;
+    color: #ffffff;
+    border-color: #E5E5E5;
+    background-color: #E5E5E5
+}
+
+/*
+.categories{
+	border:1px #ccc solid;
+	padding:10px;
+	border-radius:15px;
+}
+
+.categories h4{
+	text-align:center;
+  color: red;
+}
+
+.categories ul{
+	padding:0;
+	padding-left:20px;
+	list-style:square;
+	list-style:none;
+}
+
+.categories li{
+	padding-bottom:6px;
+	border-bottom:dotted 1px #333;
+	list-style-image: url('../images/check.png');
+}*/
