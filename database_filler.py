@@ -2,7 +2,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 from database_setup import Category, Base, CategoryItem, User
-engine = create_engine('postgresql://catalog:password@localhost/catalog')
+engine = create_engine('postgresql://catalog:catalog12345@localhost/catalog')
 # engine = create_engine('postgresql://catalog:password@localhost/catalog')
 # engine = create_engine('sqlite:///WinterSports.db')
 # Bind the engine to the metadata of the Base class so that the
