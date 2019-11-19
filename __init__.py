@@ -32,7 +32,7 @@ CLIENT_ID = json.loads(
 APPLICATION_NAME = "Catalog App"
 
 # engine = create_engine('sqlite:///WinterSports.db')
-engine = create_engine('postgresql://catalog:catalog12345@localhost/catalog')
+engine = create_engine('postgresql://catalog:catalog@localhost/catalog')
 Base.metadata.bind = engine
 
 
