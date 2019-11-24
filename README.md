@@ -33,3 +33,4 @@ This app also serves two API endpoints which will return either the categories i
 ### REFERENCES
 
 The google oauth2 code seen in this file was adapted largely from Udacity's Full Stack Development course. Most of the code in this project was sourced to some extent from that Udacity course.
+
